@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { FaHeart, FaRegHeart, FaGasPump, FaCogs, FaUsers } from "react-icons/fa";
+
+import { FaGasPump, FaHeart, FaUsers } from "react-icons/fa6";
+import { FaCogs } from "react-icons/fa";
+
 
 interface CarCardProps {
   id: string;
@@ -58,7 +61,7 @@ const CarCard: React.FC<CarCardProps> = ({
               {isFavorite ? (
                 <FaHeart className="text-red-500 text-xl" />
               ) : (
-                <FaRegHeart className="text-black text-xl" />
+                <FaHeart className="text-black text-xl" />
               )}
             </div>
           </div>
