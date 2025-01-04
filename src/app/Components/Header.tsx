@@ -1,10 +1,10 @@
 "use client"
-import React, { useState } from "react";
-import { FaBars, FaHome, FaTimes } from "react-icons/fa";
-import { FaHeart, FaBell, FaSearch, FaCog } from "react-icons/fa";
-import { VscSettings } from "react-icons/vsc";
+import React, { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
+import { FaSearch, FaHome, FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
+import { VscSettings } from "react-icons/vsc";
+
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
