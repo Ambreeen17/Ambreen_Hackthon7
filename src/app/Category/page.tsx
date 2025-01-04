@@ -1,7 +1,9 @@
 "use client"
-import { LuArrowDownUp } from "react-icons/lu";
+
 import FilterSidebar from "../Components/FilterSideBar";
 import CarCatlog from "../Components/CarCatlog"
+import { LuArrowDownUp } from "react-icons/lu";
+
 
 
 const Category: React.FC = () => {
