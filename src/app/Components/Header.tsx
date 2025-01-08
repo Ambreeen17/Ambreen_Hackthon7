@@ -1,10 +1,9 @@
 "use client"
-import React, { useState } from "react";
-import { FaBars, FaHome, FaTimes } from "react-icons/fa";
-import { FaHeart, FaBell, FaSearch, FaCog } from "react-icons/fa";
-import { VscSettings } from "react-icons/vsc";
+import React, { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
+import { FaSearch, FaHome, FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
+import { VscSettings } from "react-icons/vsc";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +17,6 @@ const Header = () => {
         {/* Logo */}
         <Image src="/Logo.png" alt="Logo" width={80} height={80} />
         
-
         {/* Search Bar */}
         <div className="relative w-full lg:w-[492px] h-[44px] mt-2 lg:mt-0">
           <input
@@ -88,23 +86,22 @@ const Header = () => {
 
       {/* Hamburger Menu (Medium and Small Screens Only) */}
       {menuOpen && (
-        <div className="fixed inset-0 bg-slate-500  w-11px h-8px z-50 flex flex-col items-center justify-item-right   space-y-6 transition-opacity">
-          <Link href="/HomePage" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-blue-500 transition">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex flex-col items-center justify-center space-y-6 transition-all">
+          <Link href="/HomePage" onClick={() => setMenuOpen(false)} className="text-lg font-medium text-white hover:text-blue-500 transition">
             Home
           </Link>
-          <Link href="/Category" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-blue-500 transition">
+          <Link href="/Category" onClick={() => setMenuOpen(false)} className="text-lg font-medium text-white hover:text-blue-500 transition">
             Categories
           </Link>
-          <Link href="/Detail" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-blue-500 transition">
-          Booking Details
+          <Link href="/Detail" onClick={() => setMenuOpen(false)} className="text-lg font-medium text-white hover:text-blue-500 transition">
+            Booking Details
           </Link>
-          <Link href="/PaymentPage" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-blue-500 transition">
+          <Link href="/PaymentPage" onClick={() => setMenuOpen(false)} className="text-lg font-medium text-white hover:text-blue-500 transition">
             Confirmation
           </Link>
-          <Link href="/DetailedDashboardPage" onClick={() => setMenuOpen(false)} className="text-lg font-medium hover:text-blue-500 transition">
+          <Link href="/DetailedDashboardPage" onClick={() => setMenuOpen(false)} className="text-lg font-medium text-white hover:text-blue-500 transition">
             Dashboard
           </Link>
-    
         </div>
       )}
     </header>

@@ -12,7 +12,10 @@ const NissanCard: React.FC = () => {
       {/* Title Section */}
       <div className="flex justify-between items-start">
         <h2 className="text-2xl font-bold">Nissan GT – R</h2>
-        <button onClick={toggleFavorite} aria-label="Favorite">
+        <button
+          onClick={toggleFavorite}
+          aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+        >
           {isFavorite ? (
             <svg
               className="w-6 h-6 text-red-500"
@@ -42,7 +45,7 @@ const NissanCard: React.FC = () => {
       {/* Rating Section */}
       <div className="flex items-center space-x-2 mt-2">
         <div className="flex text-yellow-400">
-          {[...Array(4)].map((_, index) => (
+          {[...Array(5)].map((_, index) => (
             <svg
               key={index}
               className="w-5 h-5 fill-current"
@@ -51,12 +54,6 @@ const NissanCard: React.FC = () => {
               <path d="M12 .587l3.668 7.568 8.332 1.151-6.001 5.678 1.432 8.276L12 18.896l-7.431 4.364 1.432-8.276-6.001-5.678 8.332-1.151z" />
             </svg>
           ))}
-          <svg
-            className="w-5 h-5 text-gray-300 fill-current"
-            viewBox="0 0 24 24"
-          >
-            <path d="M12 .587l3.668 7.568 8.332 1.151-6.001 5.678 1.432 8.276L12 18.896l-7.431 4.364 1.432-8.276-6.001-5.678 8.332-1.151z" />
-          </svg>
         </div>
         <span className="text-gray-500 text-sm">440+ Reviewer</span>
       </div>
@@ -104,4 +101,4 @@ const NissanCard: React.FC = () => {
   );
 };
 
-export default NissanCard;
+export default NissanCard;

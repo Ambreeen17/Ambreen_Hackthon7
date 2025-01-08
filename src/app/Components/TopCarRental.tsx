@@ -5,7 +5,7 @@ const MapContainer: React.FC = () => {
   return (
     <div className="bg-white p-6 shadow rounded-lg">
       <h3 className="font-bold text-gray-700 mb-4">Details Rental</h3>
-      <div className="w-full h-64 rounded-lg overflow-hidden">
+      <div className="w-full h-64 sm:h-80 md:h-96 lg:h-112 xl:h-128 rounded-lg overflow-hidden">
         <img
           src="Top 5 Car Rental.png" // Replace with the actual map image
           alt="TopCar"
@@ -16,4 +16,4 @@ const MapContainer: React.FC = () => {
   );
 };
 
-export default MapContainer;
+export default MapContainer;

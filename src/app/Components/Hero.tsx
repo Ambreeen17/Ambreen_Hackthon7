@@ -1,29 +1,27 @@
 import React from "react";
 import Image from "next/image";
-import { LuArrowDownUp } from "react-icons/lu"
+import { LuArrowDownUp } from "react-icons/lu";
+
 const Hero = () => {
   return (
-    <div className="bg-gray-50 min-h-screen flex items-center item-justify-center">
+    <div className="bg-gray-50 min-h-screen flex items-center justify-center">
       <section className="container mx-auto px-4 py-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Left Card */}
           <div
-            
-              className="bg-blue-100 p-6 rounded-lg shadow-lg w-[640px] h-[360px]"
-              style={{
-                backgroundImage: "url('/b2.jpg')", // Replace with your image path
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-                >
-        
-            <h2 className="text-3xl w-[272px] font-bold text-[#FFFFFF] mb-2">
+            className="bg-blue-100 p-6 rounded-lg shadow-lg w-full h-[360px]"
+            style={{
+              backgroundImage: "url('/b2.jpg')", // Replace with your image path
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-2">
               The Best Platform for Car Rental
             </h2>
-            <p className="text-white mb-6 w-[284px]">
-              Ease of doing a car rental safely and reliably. Of course at a low
-              price.
+            <p className="text-white mb-6">
+              Ease of doing a car rental safely and reliably. Of course at a low price.
             </p>
             <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
               Rental Car
@@ -39,23 +37,19 @@ const Hero = () => {
 
           {/* Right Card */}
           <div
-        
-            
-            className="bg-blue-100 p-6 rounded-lg shadow-lg w-[640px] h-[360px]"
+            className="bg-blue-100 p-6 rounded-lg shadow-lg w-full h-[360px]"
             style={{
               backgroundImage: "url('/b1.jpg')", // Replace with your image path
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
-              
           >
-            <h2 className="text-3xl font-bold text-[#FFFFFF] w-[272px] mb-2">
+            <h2 className="text-3xl font-bold text-white mb-2">
               Easy way to rent a car at a low price
             </h2>
-            <p className="text-white mb-6 w-[284px]">
-              Providing cheap car rental services and safe and comfortable
-              facilities.
+            <p className="text-white mb-6">
+              Providing cheap car rental services and safe and comfortable facilities.
             </p>
             <button className="bg-[#54A6FF] text-white px-6 py-2 rounded-lg hover:bg-blue-700">
               Rental Car
@@ -71,24 +65,22 @@ const Hero = () => {
         </div>
 
         {/* Booking Section */}
-        <div className="flex flex-col md:flex-row items-center gap-4 mt-8 bg-white p-6 rounded-lg shadow-md">
+        <div className="flex flex-col md:flex-row items-center gap-6 mt-8 bg-white p-6 rounded-lg shadow-md">
           {/* Pick-Up Section */}
           <div className="flex-1">
             <h3 className="text-lg font-medium mb-2">Pick-Up</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-
-              
               <div>
-  <label className="block text-sm mb-1">Locations</label>
-  <select className="w-full border rounded-md p-2">
-    <option value="">Select your city</option>
-    <option value="newyork">New York</option>
-    <option value="miami">Miami</option>
-    <option value="newjersey">New Jersey</option>
-    <option value="florida">Florida</option>
-    <option value="houston">Houstan</option>
-  </select>
-</div>
+                <label className="block text-sm mb-1">Locations</label>
+                <select className="w-full border rounded-md p-2">
+                  <option value="">Select your city</option>
+                  <option value="newyork">New York</option>
+                  <option value="miami">Miami</option>
+                  <option value="newjersey">New Jersey</option>
+                  <option value="florida">Florida</option>
+                  <option value="houston">Houston</option>
+                </select>
+              </div>
 
               <div>
                 <label className="block text-sm mb-1">Date</label>
@@ -103,9 +95,8 @@ const Hero = () => {
 
           {/* Swap Button */}
           <div>
-            <button className="bg-blue-500 text-white p-4 square-full shadow-md hover:bg-blue-600">
-            <LuArrowDownUp />
-              
+            <button className="bg-blue-500 text-white p-4 rounded-full shadow-md hover:bg-blue-600">
+              <LuArrowDownUp />
             </button>
           </div>
 
@@ -113,19 +104,17 @@ const Hero = () => {
           <div className="flex-1">
             <h3 className="text-lg font-medium mb-2">Drop-Off</h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            
               <div>
-  <label className="block text-sm mb-1">Locations</label>
-  <select className="w-full border rounded-md p-2">
-  <option value="">Select your city</option>
-    <option value="newyork">New York</option>
-    <option value="miami">Miami</option>
-    <option value="newjersey">New Jersey</option>
-    <option value="florida">Florida</option>
-    <option value="houston">Houstan</option>
-  </select>
-
-</div>
+                <label className="block text-sm mb-1">Locations</label>
+                <select className="w-full border rounded-md p-2">
+                  <option value="">Select your city</option>
+                  <option value="newyork">New York</option>
+                  <option value="miami">Miami</option>
+                  <option value="newjersey">New Jersey</option>
+                  <option value="florida">Florida</option>
+                  <option value="houston">Houston</option>
+                </select>
+              </div>
 
               <div>
                 <label className="block text-sm mb-1">Date</label>
@@ -143,4 +132,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero;

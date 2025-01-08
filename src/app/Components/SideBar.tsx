@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from "react";
 
@@ -32,13 +32,13 @@ const FilterComponent: React.FC = () => {
   };
 
   return (
-    <div className="p-3 bg-gray-50 min-h-screen ">
+    <div className="p-4 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-extrabold text-blue-600 mb-6 tracking-wide">MORENT</h1>
       <div className="space-y-8">
         {/* Type Filter */}
         <div>
           <h2 className="text-lg font-bold mb-3 text-gray-800">Type</h2>
-          <div className="grid grid-row gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {types.map((type) => (
               <label
                 key={type.label}
@@ -53,6 +53,7 @@ const FilterComponent: React.FC = () => {
                   checked={selectedTypes.includes(type.label)}
                   onChange={() => toggleSelection(type.label, selectedTypes, setSelectedTypes)}
                   className="form-checkbox text-blue-600 focus:ring-2 focus:ring-blue-400"
+                  aria-label={`Select ${type.label}`}
                 />
                 <span className="ml-3 text-gray-700 font-medium">{type.label} ({type.count})</span>
               </label>
@@ -63,7 +64,7 @@ const FilterComponent: React.FC = () => {
         {/* Capacity Filter */}
         <div>
           <h2 className="text-lg font-bold mb-3 text-gray-800">Capacity</h2>
-          <div className="grid grid-row gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {capacities.map((capacity) => (
               <label
                 key={capacity.label}
@@ -78,6 +79,7 @@ const FilterComponent: React.FC = () => {
                   checked={selectedCapacities.includes(capacity.label)}
                   onChange={() => toggleSelection(capacity.label, selectedCapacities, setSelectedCapacities)}
                   className="form-checkbox text-blue-600 focus:ring-2 focus:ring-blue-400"
+                  aria-label={`Select ${capacity.label}`}
                 />
                 <span className="ml-3 text-gray-700 font-medium">{capacity.label} ({capacity.count})</span>
               </label>

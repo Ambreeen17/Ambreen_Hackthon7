@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import CarCard from "../Components/CarCard";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export default function Popular() {
             <div className="p-11">
                 <p className="text-xl font-bold">Popular Cars</p>
             </div>
-            <div className="w-full h-auto bg-[#E0E9F4] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+            <div className="w-full h-auto bg-[#E0E9F4] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
                 <CarCard 
                     image="/car1.png" 
                     name="Nissan GT-R" 
@@ -47,7 +47,8 @@ export default function Popular() {
                     onButtonClick={() => alert('Car rented!')} 
                 />
                 <CarCard 
-                    image="/car2.png "
+                    image="/car4.png" 
+                    name="Porsche 911"
                     type="Luxury"
                     fuelCapacity="75L"
                     transmission="Automatic"
@@ -55,8 +56,9 @@ export default function Popular() {
                     price="$120.00"
                     originalPrice="$140.00"
                     buttonText="Rent Now"
-                    onButtonClick={() => alert('Car rented!')} name={""} id={""}                />
+                    onButtonClick={() => alert('Car rented!')} 
+                />
             </div>
-        </div>
-);
+        </div>
+    );
 }

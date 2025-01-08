@@ -5,10 +5,20 @@ const FilterSidebar: React.FC = () => {
   const [selectedCapacities, setSelectedCapacities] = useState<string[]>([]);
   const [price, setPrice] = useState(100);
 
-  const toggleSelection = (item: string, list: string[], setList: React.Dispatch<React.SetStateAction<string[]>>) => {
+  const toggleSelection = (
+    item: string,
+    list: string[],
+    setList: React.Dispatch<React.SetStateAction<string[]>>
+  ) => {
     setList((prev) =>
       prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
     );
+  };
+
+  const clearFilters = () => {
+    setSelectedTypes([]);
+    setSelectedCapacities([]);
+    setPrice(100);
   };
 
   return (
@@ -31,8 +41,9 @@ const FilterSidebar: React.FC = () => {
                   checked={selectedTypes.includes(type)}
                   onChange={() => toggleSelection(type, selectedTypes, setSelectedTypes)}
                   className="mr-2 rounded text-blue-500"
+                  id={`type-${type}`}
                 />
-                <span>{type}</span>
+                <label htmlFor={`type-${type}`} className="cursor-pointer">{type}</label>
               </li>
             ))}
           </ul>
@@ -56,8 +67,9 @@ const FilterSidebar: React.FC = () => {
                     toggleSelection(capacity, selectedCapacities, setSelectedCapacities)
                   }
                   className="mr-2 rounded text-blue-500"
+                  id={`capacity-${capacity}`}
                 />
-                <span>{capacity}</span>
+                <label htmlFor={`capacity-${capacity}`} className="cursor-pointer">{capacity}</label>
               </li>
             ))}
           </ul>
@@ -73,10 +85,19 @@ const FilterSidebar: React.FC = () => {
             value={price}
             onChange={(e) => setPrice(Number(e.target.value))}
             className="w-full"
+            id="price-range"
           />
           <p className="text-sm text-gray-600 mt-2">Max: ${price}.00</p>
         </div>
       </div>
+
+      {/* Clear Filters Button */}
+      <button
+        onClick={clearFilters}
+        className="w-full mt-6 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition duration-300"
+      >
+        Clear All Filters
+      </button>
     </div>
   );
 };

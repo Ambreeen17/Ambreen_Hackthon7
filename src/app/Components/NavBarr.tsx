@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom"; // If you're using React Router
 
@@ -6,7 +5,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-10">
+    <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-500">
@@ -53,6 +52,7 @@ const Navbar: React.FC = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden text-gray-600 focus:outline-none"
+          aria-label="Toggle navigation menu"
         >
           {isOpen ? (
             // Close Icon
@@ -92,44 +92,46 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <ul className="lg:hidden bg-white shadow-md">
-          <li>
-            <Link
-              to="/"
-              className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/cars"
-              className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Cars
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/about"
-              className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="/contact"
-              className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
+        <div className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-20">
+          <ul className="fixed right-0 top-0 w-3/4 h-full bg-white shadow-md transform transition-all duration-300 ease-in-out">
+            <li>
+              <Link
+                to="/"
+                className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/cars"
+                className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Cars
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="block px-4 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block px-2 py-2 text-gray-600 hover:bg-blue-100 transition duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       )}
     </nav>
   );

@@ -2,19 +2,16 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
+    <footer className="text-gray-600 body-font">
+      <div className="container px-4 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+          <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img src='/logo.png' alt="Morent Logo" />
+          </a>
+          <p className="mt-2 text-sm text-gray-500">Our vision is to provide convenience and help increase your sales business.</p>
+        </div>
 
-        <footer className="text-gray-600 body-font">
-  <div className="container px-4 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-    <div className="w-64 flex-shrink-0 md:mx-0 mx-auto  text-center md:text-left">
-      <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-        <img src='/logo.png' alt="Logo"/>
-      </a>
-      <p className="mt-2 text-sm text-gray-500">Our vision is to provide convenience and help increase your sales business.</p>
-
-      </div>
-      
-      <div className="flex-grow flex flex-wrap gap-10  my-4md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-        <div className="flex-grow flex flex-wrap  md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div className="flex-grow flex flex-wrap gap-10 my-4 md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
           <div className="lg:w-1/4 md:w-1/2 w-full px-4">
             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">About</h2>
             <nav className="list-none mb-10">
@@ -68,7 +65,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      </div>
 
       <div className="bg-gray-100">
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row justify-between">
@@ -81,7 +77,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    
     </footer>
   );
 };

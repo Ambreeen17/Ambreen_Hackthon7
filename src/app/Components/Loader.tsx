@@ -4,7 +4,7 @@ type Props = {};
 
 const Loader = (props: Props) => {
   return (
-    <div className='absolute bottom-1/2 right-1/2 hidden h-14 w-14 -translate-x-1/2 -translate-y-1/2 animate-pulse overflow-hidden rounded-full border-[6px] border-blue-500 lg:block'></div>
+    <div className="absolute top-1/2 left-1/2 h-14 w-14 animate-pulse overflow-hidden rounded-full border-[6px] border-blue-500 transform -translate-x-1/2 -translate-y-1/2"></div>
   );
 };
 

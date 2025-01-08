@@ -13,117 +13,7 @@ const Catlog: React.FC = () => {
     { image: "/car11.png", name: "Porsche 911", type: "Sport", fuelCapacity: "70L", transmission: "Manual", seats: "2", price: "$130.00", originalPrice: "$150.00" },
     { image: "/car12.png", name: "Lamborghini Huracan", type: "Luxury", fuelCapacity: "80L", transmission: "Automatic", seats: "2", price: "$200.00", originalPrice: "$250.00" },
     { image: "/car11.png", name: "Tesla Model S", type: "Electric", fuelCapacity: "100L", transmission: "Automatic", seats: "5", price: "$150.00", originalPrice: "$170.00" },
-    { image: "/car6.png", name: "Chevrolet Camaro", type: "Muscle", fuelCapacity: "65L", transmission: "Automatic", seats: "4", price: "$88.00", originalPrice: "$108.00" },
-    { image: "/car10.png", name: "Ferrari F8", type: "Sport", fuelCapacity: "70L", transmission: "Manual", seats: "2", price: "$300.00", originalPrice: "$350.00" },
-    // Add more cars here in the same format
-    {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      },
-      {
-        image: "/car6.png", // Path to the new car image
-        name: "New Car Model", // Car name
-        type: "Luxury", // Car type (Sport, Sedan, Luxury, etc.)
-        fuelCapacity: "90L", // Fuel capacity
-        transmission: "Automatic", // Transmission type (Manual, Automatic)
-        seats: "4", // Number of seats
-        price: "$200.00", // Rent price
-        originalPrice: "$250.00" // Original price
-      }
-      
-      
-      
-      
-      
-      
-      
-      
+    // Add more cars here...
   ];
 
   const [visibleCars, setVisibleCars] = useState(allCars.slice(0, 8)); // Show first 8 cars initially
@@ -132,13 +22,11 @@ const Catlog: React.FC = () => {
   // Function to load more cars
   const handleSeeMore = () => {
     const nextCount = seeMoreCount + 1;
-
     if (nextCount === 1) {
       setVisibleCars(allCars.slice(0, 16)); // Show first 16 cars
     } else if (nextCount === 2) {
       setVisibleCars(allCars.slice(0, 20)); // Show first 20 cars (add 4 more)
     }
-
     setSeeMoreCount(nextCount);
   };
 
@@ -151,8 +39,9 @@ const Catlog: React.FC = () => {
   return (
     <div className="w-full bg-[#E0E9F4]">
       <div className="p-11">
+        {/* Add any header or title */}
       </div>
-      <div className="w-full h-auto bg-[#E0E9F4] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+      <div className="w-full h-auto bg-[#E0E9F4] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6 px-4">
         {visibleCars.map((car, index) => (
           <CarCard
             key={index}
@@ -184,7 +73,6 @@ const Catlog: React.FC = () => {
           >
             See Less
           </button>
-          
         )}
       </div>
     </div>
