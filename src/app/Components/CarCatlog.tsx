@@ -54,8 +54,7 @@ const Catlog: React.FC = () => {
             price={car.price} // Rent price
             originalPrice={car.originalPrice} // Original price
             buttonText="Rent Now"
-            onButtonClick={() => alert(`${car.name} rented!`)}
-          />
+            onButtonClick={() => alert(`${car.name} rented!`)} id={""}          />
         ))}
       </div>
       <div className="flex justify-center py-6">

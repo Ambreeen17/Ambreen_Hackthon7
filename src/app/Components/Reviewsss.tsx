@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const reviews = [
   {
@@ -33,9 +34,12 @@ const ReviewSection: React.FC = () => {
               key={index}
               className="flex flex-col md:flex-row items-start bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300"
             >
-              <img
+          
+              <Image
                 src={review.avatar}
                 alt={review.name}
+                width={100}
+                height={100}
                 className="w-14 h-14 rounded-full object-cover"
               />
               <div className="ml-4 mt-4 md:mt-0">

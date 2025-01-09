@@ -47,7 +47,13 @@ const FavoritesContext = createContext<FavoritesContextProps | undefined>(undefi
 
 
 
-export const FavoritesProvider: React.FC = ({ children }) => {
+import { ReactNode } from "react";
+
+interface FavoritesProviderProps {
+  children: ReactNode;
+}
+
+export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }) => {
 
   const [favorites, setFavorites] = useState<Car[]>([]);
 

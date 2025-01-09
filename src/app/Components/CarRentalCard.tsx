@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 
 const CarRentalCard: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState("/car-main.jpg");
@@ -19,7 +20,7 @@ const CarRentalCard: React.FC = () => {
       {/* Left Section */}
       <div className="flex-1 flex flex-col items-center">
         <div className="w-full mb-4">
-          <img
+          <Image
             src={selectedImage}
             alt="Main Car"
             className="w-full h-60 object-cover rounded-lg transition-transform duration-300 hover:scale-105"
@@ -35,7 +36,7 @@ const CarRentalCard: React.FC = () => {
               onClick={() => setSelectedImage(img)}
               className="sm:w-16 sm:h-16 w-12 h-12"
             >
-              <img
+              <Image
                 src={img}
                 alt={`Thumbnail ${index + 1}`}
                 className={`w-full h-full object-cover rounded-lg cursor-pointer transition-transform duration-300 ${

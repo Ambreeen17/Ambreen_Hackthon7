@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 
 const DetailsRental: React.FC = () => {
   return (
     <div className="bg-white p-6 md:p-14 shadow rounded-lg">
       <h3 className="font-bold text-gray-700 mb-4 text-xl">Details Rental</h3>
       <div className="flex items-center mb-4">
-        <img
+        <Image
           src="Look.png" // Nissan GT-R image placeholder
           alt="Nissan GT-R"
           className="w-24 h-14 rounded-lg mr-4 object-cover"

@@ -11,7 +11,7 @@ const NissanCard: React.FC = () => {
     <div className="max-w-sm mx-auto bg-white shadow-lg rounded-lg p-6 text-gray-800">
       {/* Title Section */}
       <div className="flex justify-between items-start">
-        <h2 className="text-2xl font-bold">Nissan GT – R</h2>
+        <h2 className="text-2xl font-bold">Nissan GT-R</h2>
         <button
           onClick={toggleFavorite}
           aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
