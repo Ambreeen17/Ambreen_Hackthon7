@@ -2,17 +2,9 @@
 import React, { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
-import { FaSearch,  FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
-import { FaHome } from 'react-icons/fa'; // FontAwesome
+import { FaSearch, FaHome, FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
 import { VscSettings } from "react-icons/vsc";
 
-
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 87d2f9d1b45e4cf362e9f664359fce03bfdbab4d
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
