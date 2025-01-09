@@ -2,14 +2,22 @@
 import React, { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
-import { FaSearch,  FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
-import { FaHome } from 'react-icons/fa'; // FontAwesome
+import { FaSearch, FaHome, FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
 import { VscSettings } from "react-icons/vsc";
 
-
-
-
-
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * The Header component renders the main header of the application.
+ *
+ * It contains the logo, search bar, and navigation icons.
+ *
+ * On large screens, the navigation icons are displayed horizontally.
+ * On medium and small screens, the navigation icons are hidden and replaced
+ * with a hamburger icon that toggles a menu with the same items.
+ *
+ * @returns The header component.
+ */
+/******  b86bcf73-9898-4574-b293-e1a3d7ccba58  *******/
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
