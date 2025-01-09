@@ -2,8 +2,13 @@
 import React, { useState } from "react"
 import Image from "next/image";
 import Link from "next/link";
-import { FaSearch, FaHome, FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
+import { FaSearch,  FaHeart, FaBell, FaCog, FaTimes, FaBars } from "react-icons/fa";
+import { FaHome } from 'react-icons/fa'; // FontAwesome
 import { VscSettings } from "react-icons/vsc";
+
+
+
+
 <<<<<<< HEAD
 =======
 
@@ -33,7 +38,8 @@ const Header = () => {
             <FaSearch />
           </div>
           <div className="absolute text-2xl right-4 top-1/2 transform -translate-y-1/2 text-gray-500">
-            <VscSettings />
+          <VscSettings />
+
           </div>
         </div>
       </div>

@@ -1,9 +1,10 @@
 import React from "react";
-import { useFavorites } from "../HomePage/FavoritesContext"; // Use the Favorites context
+import { useFavorites } from "./FavoritesContext"; // Use the Favorites context
 import Image from "next/image";
 
 const FavoritesPage: React.FC = () => {
-  const { favorites } = useFavorites();
+  const favoritesContext = useFavorites();
+  const favorites = favoritesContext ? favoritesContext.favorites : [];
 
   if (favorites.length === 0) {
     return (

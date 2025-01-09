@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { LuArrowDownUp } from "react-icons/lu";
+import { LuArrowUpDown } from "react-icons/lu";
+
 
 const Hero = () => {
   return (
@@ -96,7 +97,8 @@ const Hero = () => {
           {/* Swap Button */}
           <div>
             <button className="bg-blue-500 text-white p-4 rounded-full shadow-md hover:bg-blue-600">
-              <LuArrowDownUp />
+            <LuArrowUpDown />
+
             </button>
           </div>
 
