@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.40.0",
-    "eslint": "^9.17.0",
+    "eslint": "^8.57.1",
     "lucide-react": "^0.469.0",
     "next": "15.1.4",
     "react": "^19",
